@@ -1,0 +1,34 @@
+{
+  "name": "multiplayer-web-game-ably-starter-kit",
+  "version": "1.0.0",
+  "description": "This repository contains a starter template for building any realtime multiplayer game on the web with Ably using the client/server architecture. This project uses vanilla JS on the client-side and NodeJS on the server-side",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srushtika/multiplayer-web-game-ably-starter-kit.git"
+  },
+  "author": "Srushtika Neelakantam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Srushtika/multiplayer-web-game-ably-starter-kit/issues"
+  },
+  "homepage": "https://github.com/Srushtika/multiplayer-web-game-ably-starter-kit#readme",
+  "dependencies": {
+    "ably": "^1.2.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1"
+  }
+}

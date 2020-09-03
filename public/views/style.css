@@ -1,0 +1,149 @@
+body {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+h1 {
+  margin: 80px 0px 20px 0px;
+}
+
+h4 {
+  margin-bottom: 50px;
+}
+
+input {
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.card-flex {
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  text-align: center;
+}
+
+.room-input {
+  display: inline-block;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.random-code {
+  padding: 2px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.copy {
+  color: #0069d9;
+}
+
+.copy:hover {
+  color: black;
+}
+
+.copy:active {
+  color: gray;
+}
+
+.host-game {
+  display: flex;
+  width: 100%;
+}
+
+.room-ready {
+  display: none;
+}
+
+.host-info {
+  width: 50%;
+  margin: 180px 90px;
+}
+
+.player-info {
+  width: 50%;
+  margin: 150px 90px;
+}
+
+.players-list {
+  height: 440px;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.not-host-game {
+  width: 100%;
+}
+
+.waiting {
+  width: 50%;
+  margin: 150px auto;
+  max-height: 440px;
+}
+
+.host-gameplay {
+  display: none;
+}
+
+.not-host-gameplay {
+  display: none;
+}
+
+.game-area {
+  display: inline-block;
+  width: 800px;
+  height: 400px;
+  padding: 20px;
+  margin: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.player-color-block {
+  width: 10px;
+  height: 10px;
+}
+
+.player-block {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.player-color {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 40px auto 5px auto;
+}
+
+.player-text {
+  padding-right: 10px;
+}
+
+#alert-host {
+  display: none;
+}
+
+#alert-not-host {
+  display: none;
+}
+
+.game-updates-list {
+  height: 150px;
+  max-height: 440px;
+  overflow-y: auto;
+}
+
+.game-updates-card {
+  width: 50%;
+  margin: 60px auto;
+  max-height: 180px;
+}

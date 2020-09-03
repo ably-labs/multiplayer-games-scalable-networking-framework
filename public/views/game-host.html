@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/views/style.css" />
+
+    <title>My multiplayer game</title>
+
+    <script
+      lang="text/javascript"
+      src="https://cdn.ably.io/lib/ably.min-1.js"
+    ></script>
+    <script type="module" src="../js/player.js" defer></script>
+  </head>
+  <body>
+    <div id="alert-host" class="alert alert-danger" role="alert">
+      You've ended this game, you'll be redirected to the homepage now...
+    </div>
+    <div id="host-waiting">
+      <div class="host-game">
+        <div class="host-info">
+          <div class="card text-center">
+            <div class="card-header">You are the host</div>
+            <div id="room-not-ready" class="card-body room-not-ready">
+              <p class="card-text">Creating your unique game room...</p>
+            </div>
+            <div id="room-ready" class="card-body room-ready">
+              <p class="card-text">
+                Being the host gives you the control to start this game.
+              </p>
+              <p>Share this room code to let others join</p>
+              <div class="random-code">
+                <p class="h2" id="random-room-code"></p>
+                <button class="btn copy" onclick="copyCode()">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+              <p class="card-text">
+                As the other players join, they will appear on the right. You
+                can wait until all expected players are in, then start the game.
+              </p>
+              <button onclick="startGame()" class="btn btn-primary">
+                Start the game
+              </button>
+            </div>
+            <div id="player-count" class="card-footer text-muted">
+              1 player(s) online including you
+            </div>
+          </div>
+        </div>
+        <div class="player-info">
+          <div class="card">
+            <div class="card-header">Players' join / leave updates</div>
+            <ul
+              id="host-players-list"
+              class="players-list list-group list-group-flush"
+            ></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="host-gameplay" class="host-gameplay">
+      <div class="player-color">
+        <div class="player-text">
+          <p>You are</p>
+        </div>
+        <div id="player-color-indicator" class="player-color-block"></div>
+        <div class="player-text">
+          <p id="player-room-info">&nbsp;</p>
+        </div>
+      </div>
+
+      <p>Use arrow keys to move your block around the game area</p>
+      <div id="game-area" class="game-area card text-center"></div>
+      <div>
+        <button onclick="fakeDeath()" class="btn btn-primary">
+          Fake your player's death
+        </button>
+        <button onclick="endGame()" class="btn btn-primary">
+          End the game
+        </button>
+      </div>
+      <div class="card text-center game-updates-card">
+        <div class="card-header">Game updates</div>
+        <ul
+          id="game-updates-list"
+          class="game-updates-list list-group list-group-flush"
+        ></ul>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
